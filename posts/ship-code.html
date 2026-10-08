@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Why Every Investor Should Learn to Ship Code — JohnPierreBaptiste</title>
-  <meta name="description" content="Building software changed how I evaluate companies. Here's what finance gets wrong about engineering, and what engineers get wrong about finance.">
+  <meta name="description" content="Classified. Clearance code required to read this file.">
   <meta name="theme-color" content="#0a0b0d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../classified.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23ffb000'>&#10070;</text></svg>">
 </head>
 <body>
@@ -17,6 +18,7 @@
     <a href="../index.html" class="post-back">&larr; Back</a>
     <a href="../index.html" class="nav-logo">JPB</a>
   </nav>
+  <div class="tape-wrap" role="img" aria-label="Classified file"><div class="tape" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div></div>
   <article>
     <header class="post-header container">
       <div class="post-meta">
@@ -26,74 +28,35 @@
       <h1 class="post-title">Why Every Investor Should Learn to Ship Code</h1>
     </header>
     <div class="post-body container">
-      <p>I spent the first three years of my career reading balance sheets. I spent the next two writing Python scripts that would have made my former self nervous. The second education was more valuable than the first, and it wasn't close.</p>
-
-      <p>Here's the thing nobody in finance wants to admit: most investors have no idea what they're actually valuing. They can model a DCF in their sleep. They can debate WACC assumptions until the bar closes. But ask them what a database migration looks like, or why a rewrite from monolith to microservices might take eighteen months instead of six, and you'll get a confident answer that is completely wrong.</p>
-
-      <p>I know because I used to be that person.</p>
-
-      <h2>The Spreadsheet Delusion</h2>
-
-      <p>In 2023, I was evaluating a SaaS company that looked perfect on paper. Revenue growing 40% year over year. Net retention above 130%. The financial model sang. Every analyst on the call was bullish.</p>
-
-      <p>But I'd recently started building a side project, a small tool for tracking portfolio exposures. Nothing fancy. Flask backend, PostgreSQL, a React frontend I mostly copied from tutorials. The process of building even that tiny thing had rewired something in my brain. I started asking different questions.</p>
-
-      <p>I asked about their deployment pipeline. The CTO paused. They were still deploying manually. Every release required a senior engineer to SSH into production servers and run scripts by hand. For a company with 200 enterprise customers and a $400M valuation.</p>
-
-      <p>That single question, which I never would have thought to ask twelve months earlier, saved my fund from a position that cratered 60% when their platform went down for three days during a botched update. The post-mortem was predictable to anyone who'd ever pushed broken code to production at 2 AM.</p>
-
-      <h2>What Building Teaches You</h2>
-
-      <p>Reading about software is to building software what reading restaurant reviews is to working a Friday night line. The knowledge lives in your hands, not your head.</p>
-
-      <p>When you've actually shipped something, even something small and ugly, you develop an intuition for a set of things that matter enormously in company evaluation but never show up in a 10-K filing.</p>
-
-      <p>You learn that technical debt is real and compounds exactly like financial debt, except there's no line item for it. You learn that "we'll refactor later" is the engineering equivalent of "we'll cut costs next quarter." It almost never happens voluntarily. It happens when something breaks.</p>
-
-      <p>You learn that the difference between a good engineering team and a mediocre one isn't speed. It's the ability to change direction without everything catching fire. I didn't understand this until I tried to add a simple feature to my own project and realized I'd painted myself into an architectural corner that took two weeks to escape.</p>
-
-      <p>Two weeks. For a feature that should have taken an afternoon. Multiply that by a thousand engineers and you start to understand why software estimates are famously, almost comically wrong.</p>
-
-      <h2>The Moat You Can't Model</h2>
-
-      <p>Wall Street loves the word "moat." Network effects, switching costs, brand. All real. All important. But there's a moat that rarely gets discussed in investor presentations because it's invisible to anyone who hasn't built things.</p>
-
-      <p>I call it architectural leverage.</p>
-
-      <p>Some companies are built so that every new feature makes the next feature easier. The codebase accumulates capability like a snowball rolling downhill. Others are built so that every new feature is a negotiation with the sins of the past. Same headcount. Same burn rate. Radically different trajectories.</p>
-
-      <p>You cannot see this in the financials. You can barely see it in the product. But if you've ever inherited a codebase where adding a button to the UI requires changes in fourteen files across six services, you feel it in your bones. And you learn to ask the questions that surface it in diligence.</p>
-
-      <p>Last year I passed on a company that every other fund in our circle was fighting to get into. Great metrics. Charismatic founder. The works. But during technical diligence, I noticed their API response times were degrading quarter over quarter, even as they added infrastructure. That's a signature. It means the complexity is growing faster than the team's ability to manage it. Six months later they announced a "strategic pause" on new features to focus on platform stability. The stock is down 35%.</p>
-
-      <h2>The Uncomfortable Truth</h2>
-
-      <p>Finance people think they're rigorous because they use numbers. Engineers think they're rigorous because they use logic. Both are half right.</p>
-
-      <p>The best evaluations I've ever done live at the intersection. They combine the financial discipline of understanding unit economics with the technical intuition of knowing what's actually hard to build. Most investors have the first skill. Almost none have the second. That's the arbitrage.</p>
-
-      <p>I'm not saying every analyst needs to become a software engineer. I'm saying you should build something. Anything. A script that automates part of your workflow. A simple web app. A bot. Something that forces you to confront the gap between "this should be easy" and the reality of making a computer do what you want.</p>
-
-      <p>That gap is where billions of dollars of enterprise value get created and destroyed every year. And right now, most of the people allocating capital toward software companies have never once stood on the other side of it.</p>
-
-      <h2>Start Small, Stay Curious</h2>
-
-      <p>I still write code most weekends. Nothing that would impress a real engineer. But every time I struggle with a dependency conflict or spend an hour debugging something that turned out to be a single missing comma, I get a little better at my actual job.</p>
-
-      <p>The best trade I made last year started with a Hacker News comment about database indexing strategies that led me down a rabbit hole about query optimization, which led me to realize that a mid-cap company I'd been watching had quietly re-architected their data layer in a way that their competitors hadn't noticed yet. Their margins expanded two quarters later exactly as I'd expected.</p>
-
-      <p>No financial model gave me that insight. No sell-side report flagged it. It came from the specific, hard-won knowledge of having built things myself. Badly, slowly, with plenty of mistakes. But built.</p>
-
-      <blockquote>
-        <p>The investor who can read a balance sheet and a codebase will always have an edge over the one who can only read the balance sheet. The gap is narrowing, but it's still enormous.</p>
-      </blockquote>
-
-      <p>Learn to ship code. It will change how you see everything.</p>
+      <section class="dossier" id="dossier" aria-labelledby="dossier-title">
+        <div class="dossier-sheet" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <div class="tape tape-x1" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div>
+          <div class="tape tape-x2" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div>
+        </div>
+        <div class="dossier-inner">
+          <p class="dossier-stamp" aria-hidden="true">Top Secret</p>
+          <h2 class="dossier-title" id="dossier-title">Clearance required</h2>
+          <p class="dossier-copy">This file is classified. Enter your clearance code to decrypt it.</p>
+          <form class="dossier-form" id="dossier-form" autocomplete="off">
+            <label class="dossier-label" for="clearance">Clearance code</label>
+            <div class="dossier-row">
+              <span class="dossier-prompt" aria-hidden="true">$</span>
+              <input id="clearance" name="clearance" type="password" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" required>
+              <button type="submit">Decrypt</button>
+            </div>
+            <p class="dossier-status" id="dossier-status" role="status" aria-live="polite"></p>
+          </form>
+          <noscript><p class="dossier-status">JavaScript is required to decrypt this file.</p></noscript>
+        </div>
+      </section>
     </div>
     <div class="post-end-mark container">
       <span>&#9670;</span>
     </div>
   </article>
+  <script type="application/json" id="classified-payload">{"v":1,"iter":310000,"salt":"qrC+03Tdigy4OlBHvDpRuA==","iv":"fKFkKO2MJs1TVHCu","ct":"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"}</script>
+  <script src="../classified.js"></script>
   <script src="../script.js"></script>
 </body>
 </html>

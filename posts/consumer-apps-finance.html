@@ -4,12 +4,13 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Building Consumer Apps as a Finance Person: What I Got Wrong — JohnPierreBaptiste</title>
-  <meta name="description" content="Honest reflection on the mistakes I made shipping a consumer product with a finance brain, and what I'd do differently next time.">
+  <meta name="description" content="Classified. Clearance code required to read this file.">
   <meta name="theme-color" content="#0a0b0d">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../classified.css">
   <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90' fill='%23ffb000'>&#10070;</text></svg>">
 </head>
 <body>
@@ -17,6 +18,7 @@
     <a href="../index.html" class="post-back">&larr; Back</a>
     <a href="../index.html" class="nav-logo">JPB</a>
   </nav>
+  <div class="tape-wrap" role="img" aria-label="Classified file"><div class="tape" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div></div>
   <article>
     <header class="post-header container">
       <div class="post-meta">
@@ -26,80 +28,35 @@
       <h1 class="post-title">Building Consumer Apps as a Finance Person: What I Got Wrong</h1>
     </header>
     <div class="post-body container">
-      <p>I spent years in finance learning how to model uncertainty. Discounted cash flows, scenario analyses, sensitivity tables. The whole apparatus designed to make the unknowable feel manageable. Then I tried to build a consumer app, and I discovered that none of it transfers. Not one bit.</p>
-
-      <p>Actually, that's not quite right. The skills transfer. They just transfer in the worst possible way. Like bringing a very detailed map of Paris to navigate Tokyo.</p>
-
-      <h2>Mistake 1: I Built a Business Case Before I Built Anything</h2>
-
-      <p>Old habits die violently. Before writing a single line of code, before sketching a single screen, I had a three-tab spreadsheet. TAM, SAM, SOM. Unit economics at scale. A sensitivity table showing margins at different price points. I even modeled churn rates for a product that did not yet exist and had zero users.</p>
-
-      <p>This felt productive. It felt rigorous. In finance, you would never commit capital without a model, so why would you commit time?</p>
-
-      <p>Here's why: because a spreadsheet about a product nobody has used is fiction. Beautifully formatted fiction, with conditional formatting and named ranges, but fiction. I spent two weeks refining assumptions that I could have tested in two days by putting something ugly in front of five people.</p>
-
-      <p>The finance instinct says "de-risk before you deploy." The builder instinct says "deploy to de-risk." I had to unlearn the first one the hard way.</p>
-
-      <h2>Mistake 2: I Optimized for the Wrong Metric</h2>
-
-      <p>Finance trains you to think in terms of value capture. Revenue, margins, LTV/CAC ratios. So naturally, when I started thinking about my app, I optimized for monetization from day one. The pricing page was designed before the onboarding flow. I spent hours on payment integrations before I'd figured out whether anyone would use the free version.</p>
-
-      <p>This is like furnishing a house before pouring the foundation. It looks like progress. It is not progress.</p>
-
-      <p>Consumer apps live and die on one thing: do people come back tomorrow? Not "will they pay." Not "what's the gross margin." Just: did they open the app again? Retention is the only metric that matters in the early days, and it's the one metric that finance people are least equipped to think about because it's not on any income statement.</p>
-
-      <p>I should have spent that time making the core experience so good that people felt a small pang of loss when they closed the app. Instead, I had a Stripe integration and a churn model. For an app with eleven users.</p>
-
-      <h2>Mistake 3: I Treated Users Like Rational Actors</h2>
-
-      <p>This one still embarrasses me.</p>
-
-      <p>In finance, you build models where agents act in their economic self-interest. People maximize utility. Markets find equilibrium. It's all very clean and very wrong when applied to consumer behavior.</p>
-
-      <p>I designed my app assuming users would read the tutorial, follow the suggested workflow, and use features in the order I intended. I wrote detailed tooltips. I built a logical, sequential onboarding that moved through concepts in the correct pedagogical order.</p>
-
-      <p>Nobody read any of it. People clicked randomly, skipped every explanation, got confused by things I thought were obvious, and found workarounds for things I thought were locked down. One early tester used a notes field as their primary navigation method. I still don't fully understand how.</p>
-
-      <p>Users are not rational actors optimizing for utility. They are busy, distracted people with fourteen other tabs open, giving you about forty seconds of goodwill before they bounce. You don't get to explain your product to them. The product has to explain itself, instantly, or it's over.</p>
-
-      <h2>Mistake 4: I Was Afraid of Looking Unserious</h2>
-
-      <p>Finance culture prizes polish. The deck has to be perfect. The model has to be airtight. You present finished work, not rough drafts. Showing something half-baked to a client would be career suicide.</p>
-
-      <p>So I kept my app hidden for months. Tweaking. Refining. Adding features nobody asked for because I imagined sophisticated users who would need them. I was terrified of showing something that looked amateur, something that might make people think I didn't know what I was doing.</p>
-
-      <p>Meanwhile, builders who actually knew what they were doing were shipping ugly prototypes, collecting feedback, and iterating. They looked unserious. They were making faster progress than me by every measure that mattered.</p>
-
-      <p>The lesson took months to land: in consumer products, the cost of shipping too late almost always exceeds the cost of shipping too early. Your reputation is not your brand guidelines. It's whether the thing works.</p>
-
-      <h2>What I'd Do Differently</h2>
-
-      <p>If I could go back, I'd change four things. First, I'd build the smallest possible version in one week and show it to strangers. Not friends. Strangers don't spare your feelings, and that's exactly what you need.</p>
-
-      <p>Second, I'd ban myself from opening a spreadsheet for the first three months. No financial modeling until there's actual usage data to model. Speculation dressed up as analysis is still speculation.</p>
-
-      <p>Third, I'd watch five people use the app before making any design decisions. Not ask them what they think. Watch them. The gap between what people say and what people do is where all the important information lives.</p>
-
-      <p>Fourth, I'd find a co-builder who had shipped consumer products before. Not an advisor. Not a mentor. Someone in the trenches, writing code and talking to users, who could catch my finance-brain instincts before they calcified into product decisions.</p>
-
-      <h2>The One Thing Finance Got Right</h2>
-
-      <p>I don't want to be entirely self-flagellating here. Finance gave me one gift that turned out to be genuinely useful: comfort with numbers that tell you bad news.</p>
-
-      <p>A lot of first-time builders I've met struggle to look at a dashboard showing declining retention or a cohort analysis that trends the wrong direction. They explain it away, blame external factors, wait for more data. Finance trained me to stare at ugly numbers without flinching. When the data said my onboarding was broken, I didn't argue with it. I just fixed the onboarding.</p>
-
-      <p>That willingness to let data override your ego. That's the one transferable skill. Everything else, I had to learn from scratch, most of it by getting it wrong first.</p>
-
-      <blockquote>
-        <p>The best thing about being wrong is that it's the fastest way to figure out what right looks like. The worst thing about being wrong is that it doesn't feel fast while it's happening.</p>
-      </blockquote>
-
-      <p>I'm still learning. But at least now when I catch myself opening a spreadsheet before I've talked to a user, I close the laptop and pick up the phone instead. Most of the time.</p>
+      <section class="dossier" id="dossier" aria-labelledby="dossier-title">
+        <div class="dossier-sheet" aria-hidden="true">
+          <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+          <div class="tape tape-x1" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div>
+          <div class="tape tape-x2" aria-hidden="true"><div class="tape-track"><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span><span>Classified</span><span>Clearance required</span><span>Do not distribute</span><span>Eyes only</span></div></div>
+        </div>
+        <div class="dossier-inner">
+          <p class="dossier-stamp" aria-hidden="true">Top Secret</p>
+          <h2 class="dossier-title" id="dossier-title">Clearance required</h2>
+          <p class="dossier-copy">This file is classified. Enter your clearance code to decrypt it.</p>
+          <form class="dossier-form" id="dossier-form" autocomplete="off">
+            <label class="dossier-label" for="clearance">Clearance code</label>
+            <div class="dossier-row">
+              <span class="dossier-prompt" aria-hidden="true">$</span>
+              <input id="clearance" name="clearance" type="password" autocomplete="off" autocapitalize="characters" autocorrect="off" spellcheck="false" required>
+              <button type="submit">Decrypt</button>
+            </div>
+            <p class="dossier-status" id="dossier-status" role="status" aria-live="polite"></p>
+          </form>
+          <noscript><p class="dossier-status">JavaScript is required to decrypt this file.</p></noscript>
+        </div>
+      </section>
     </div>
     <div class="post-end-mark container">
       <span>&#9670;</span>
     </div>
   </article>
+  <script type="application/json" id="classified-payload">{"v":1,"iter":310000,"salt":"vI2VaPuQelItLb1AGtrDzA==","iv":"q/pq4EpGup2tXJ9N","ct":"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"}</script>
+  <script src="../classified.js"></script>
   <script src="../script.js"></script>
 </body>
 </html>
