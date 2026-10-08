@@ -1,4 +1,4 @@
-// JohnPierreBaptiste — Site Interactions
+// Laurence Tarquinio — Site Interactions
 // One job: a thin ink line tracking reading progress on essay pages.
 
 (() => {
